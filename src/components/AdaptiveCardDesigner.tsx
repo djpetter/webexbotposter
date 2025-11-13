@@ -424,7 +424,7 @@ export function AdaptiveCardDesigner({
         </div>
 
         {/* JSON + preview */}
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2 items-start">
           <div className="space-y-2">
             <div className="flex items-center justify-between gap-2">
               <Label className="text-slate-200">Adaptive Card JSON</Label>
@@ -441,7 +441,7 @@ export function AdaptiveCardDesigner({
             <Textarea
               value={cardJsonText}
               onChange={(e) => setCardJsonText(e.target.value)}
-              className="min-h-[800px] font-mono text-xs bg-slate-950/80 border-slate-700 text-slate-100"
+              className="h-[700px] max-h-[90vh] overflow-auto font-mono text-xs bg-slate-950/80 border-slate-700 text-slate-100"
               spellCheck={false}
             />
             {parsingError && (
@@ -451,7 +451,7 @@ export function AdaptiveCardDesigner({
 
           <div className="space-y-2">
             <Label className="text-slate-200">Preview</Label>
-            <div className="min-h-[320px] p-3 rounded-md bg-slate-950/80 border border-slate-700 overflow-auto">
+            <div className="h-[700px] max-h-[90vh] p-3 rounded-md bg-slate-950/80 border border-slate-700 overflow-auto">
               <div ref={previewRef} />
             </div>
           </div>
