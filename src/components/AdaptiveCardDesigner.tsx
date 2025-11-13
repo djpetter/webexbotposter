@@ -441,7 +441,7 @@ export function AdaptiveCardDesigner({
             <Textarea
               value={cardJsonText}
               onChange={(e) => setCardJsonText(e.target.value)}
-              className="min-h-[320px] font-mono text-xs bg-slate-950/80 border-slate-700 text-slate-100"
+              className="min-h-[800px] font-mono text-xs bg-slate-950/80 border-slate-700 text-slate-100"
               spellCheck={false}
             />
             {parsingError && (
